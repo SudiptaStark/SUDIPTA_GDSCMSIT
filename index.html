@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUBHOUSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div style="position: fixed; left: 0; right: 0; top: auto;">
+        <div class="top">
+            <div class="left">
+                <img src="https://static-assets.clubhouseapi.com/static/img/img_hand_wave.3454a59f2b06.svg" alt="clubhouse">
+            </div>
+            <div class="right">
+                <h4>blog</h4>
+                <h4>jobs</h4>
+                <button class="get">get clubhouse</button>
+            </div>
+        </div>
+
+
+        <div class="middle">
+            <div class="front" id="front">
+                <img class="logo" src="https://static-assets.clubhouseapi.com/static/img/clubhouse_logo_dark.2677abb66623.svg" alt="Clubhouse logo">
+                <img class="arrow" src="https://static-assets.clubhouseapi.com/static/img/icon_arrow_down.30d965af62c2.svg" alt="scroll for more">
+            </div>
+    
+            <div class="back" id="back">
+                <p>friends over followers</p>
+                <button class="get" id="get">get clubhouse</button>
+            </div>
+        </div>
+
+        
+        <div class="bottom">
+            <div class="left">
+                <a href="https://privacy.clubhouse.com/">privacy</a>
+                <a href="https://tos.clubhouse.com/">terms</a>
+                <a href="https://support.clubhouse.com/">FAQs</p>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/reel/CvWUrgAp5MR/?igshid=MzRlODBiNWFlZA%3D%3D"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+            </div>
+            <div class="right">
+                <i class="fa fa-copyright" aria-hidden="true"></i> 2023 STARKLORD STUDIOS Co.
+            </div>
+        </div>
+
+        <div class="scrollformore">
+            <div class="scrollformore-text">Scroll for more</div>
+        </div>
+    </div>
+    <div style="height: 100vh; background-color: white;"></div>
+    <div style="height: 100vh; background-color: #ffe450;"></div>
+
+    <script>
+        const fixedHeading = document.getElementById('front');
+        const backHeading = document.getElementById('back');
+        const button = document.getElementById('get');
+        // const fixedText = document.getElementById('fixed-text');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition >= window.innerHeight / 2) {
+                // Change the content in the top half when scrolled halfway
+                fixedHeading.style.display = "none";
+                backHeading.style.display = "inline";
+                button.style.backgroundColor = 'white';
+                button.style.color = 'black';
+                button.style.borderColor = 'white' ;
+            }
+            else{
+                button.style.backgroundColor = '#242420';
+                button.style.color = 'white';
+            }
+        });
+    </script>
+</body>
+</html>

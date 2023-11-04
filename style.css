@@ -1,0 +1,207 @@
+body{
+    font-family: 'Nunito', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #242420;
+}
+a:hover{
+    cursor: pointer;
+    color: orangered;
+}
+button{
+    border-radius: 2160px;
+    cursor: pointer;
+    min-height: 2rem;
+    border: none;
+    transition: all 0.5s ease 0s;
+    padding: 0.5rem 1.5rem;
+    min-width: 8rem;
+    font-size: 1.06rem;
+    font-family: Nunito, sans-serif;
+    font-weight: 800;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 54px;
+}
+.top .left img{
+    height: 64px;
+}
+.top .right{
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+}
+.get{
+    background-color: transparent;
+    height: 60px;
+    border-width: 2px;
+    border-style: solid;
+}
+.get:hover{
+    background-color: black;
+    color: white;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.middle .logo{
+    align-items: center;
+    font-family: Nunito, sans-serif;
+    animation: slide-bottom 1.25s ease-in-out;
+    height: 96px;
+}
+.middle .front{
+    display: flex;
+    flex-direction: column;
+    transform: translate(0,60%);
+}
+.middle .back{
+    display: none;
+    color: #242420;
+    font-weight: 800;
+    font-size: 80px;
+    letter-spacing: -3px;
+    font-family: "GT Maru", "Nunito", sans-serif;
+    text-align: center;
+    margin: auto;
+    transform: translate(0,60%);
+    animation: slideIn 1s ease-in-out;
+}
+.back p{
+    margin: 0px;
+}
+.middle .arrow{
+    margin-top: 10px;
+    animation: loop 2s infinite ease-out ;
+    height: 36px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 72px 36px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-weight: 700;
+}
+.bottom .right{
+    font-size: 12px;
+    font-weight: normal;
+}
+.bottom .left{
+    display: flex;
+    gap: 32px;
+}
+
+.scrollformore{
+    background-color: #ffe450;
+    height: 84px;
+    position: fixed;
+    bottom: -42px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 90% 90% 0 0;
+    visibility: visible;
+    z-index: 9999;
+    mask-image: paint(smooth-corners);
+    animation: 1s ease-out quick-slide-bottom;
+}
+.scrollformore-text{
+    text-align: center;
+    margin-top: 10px;
+    color: #242420;
+    font-weight: 700;
+}
+
+@keyframes slide-bottom{
+    0% {
+        transform: translateY(4086px);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    85% {
+        transform: translateY(4px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes loop{
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    75% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-1px);
+    }
+}
+
+@keyframes quick-slide-bottom{
+    0% {
+        transform: translateY(100px);
+    }
+    70% {
+        transform: translateY(-4px);
+    }
+    85% {
+        transform: translateY(1.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+@keyframes slideIn{
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(60%);
+        opacity: 1;
+    }
+}
+@media only screen and (max-device-width: 549px){
+    .top .left img{
+        height: 36px;
+    }
+    .top .right{
+        gap: 24px;
+    }
+    .middle .logo{
+        height: 42px;
+    }
+    .middle .arrow{
+        height: 22px;
+    }
+    .bottom{
+        padding: 0 36px 36px ;
+    }
+    .bottom .left{
+        gap: 16px;
+    }
+    .middle .back{
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
